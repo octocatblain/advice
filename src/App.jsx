@@ -22,7 +22,7 @@ function App() {
       setAdvice(data.slip.advice);
 
     } catch (error) {
-      console.error('Error fetching advice:', error);
+      alert('Error fetching advice:', error);
     }
   }
 
@@ -32,7 +32,6 @@ function App() {
 
   const toggleInfo = () => {
     setInfo(!info);
-
   }
 
   return (
@@ -46,7 +45,7 @@ function App() {
           <hr className='bg-black h-[1px] border-none ' />
           <h1 className="text-white  text-xl pt-4">{advice}</h1>
         </div>
-        <button className="bg-emerald-300/[.5] border rounded font-bold hover:bg-slate-900 hover:text-white border-black p-2" onClick={fetchAdvice}>
+        <button className="bg-blue-500 rounded font-bold hover:bg-slate-900 hover:text-white border-black p-2" onClick={fetchAdvice}>
           <span>Get advice</span>
         </button>
       </div>
